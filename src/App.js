@@ -8,6 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigation sample="hello sample">sample children</Navigation>}>
         <Route index element={<p>Homepage</p>}></Route>
+        <Route path="hello" element={<p>Hello</p>}></Route>
       </Route>
     </Routes>
   );
