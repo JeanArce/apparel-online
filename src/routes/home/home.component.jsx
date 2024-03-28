@@ -1,19 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { fetchProducts } from "../../utils/shop/shop.util";
-import Directory from "../../components/directory/directory.component";
+import ProductCard from "../../components/product-card/product-card.component";
+import './home.styles.scss';
 
 const Home = () => {
 
+    const [products, setProducts] = useState([]);
+
     useEffect(() => {
         const getProducts = async() => {
-            const products = await fetchProducts();
+            const productsJson = await fetchProducts();
+            setProducts(productsJson.data);
         };
         getProducts();
     }, []);
 
+  
     return (
-        <Directory />
-    )
+      <Fragment>
+        <h2 className="category-title">Products</h2>
+
+        {
+        <div className="category-container">
+          {products &&
+            products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+        }
+
+
+      </Fragment>
+    );
 };
 
 
