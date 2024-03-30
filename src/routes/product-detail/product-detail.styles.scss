@@ -1,0 +1,16 @@
+.productDetailContainer {
+    
+    display: flex;
+    justify-content: center;
+
+    .left {
+        max-width: 400px;
+        margin-right: 15px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 'center';
+        }
+    }
+}
