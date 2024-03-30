@@ -28,8 +28,6 @@ const Home = () => {
             ))}
         </div>
         }
-
-
       </Fragment>
     );
 };
