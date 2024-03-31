@@ -5,7 +5,8 @@ import {
   LogoContainer,
   NavLinks,
   NavLink,
-} from "./navigation.styles";
+  LogoText,
+} from "./layout.styles";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 
@@ -14,7 +15,7 @@ import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import Footer from "../../components/footer/footer.component";
 
-const Navigation = () => {
+const Layout = () => {
 
    const { isCartOpen } = useContext(CartContext);
 
@@ -24,6 +25,7 @@ const Navigation = () => {
         <NavigationContainer>
           <LogoContainer>
             <Logo width={45} height={45} />
+            <LogoText>Online Apparel</LogoText>
           </LogoContainer>
 
           <NavLinks>
@@ -42,4 +44,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default Layout;
