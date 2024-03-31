@@ -28,6 +28,7 @@ const Navigation = () => {
 
           <NavLinks>
             <NavLink to="/">Shop</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
             <CartIcon />
           </NavLinks>
 
