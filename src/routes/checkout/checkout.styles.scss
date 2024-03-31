@@ -57,3 +57,19 @@
 
     }
 }
+
+
+.pay-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+    margin: 15px auto 0px auto;
+
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        justify-content: flex-start;
+    }
+}

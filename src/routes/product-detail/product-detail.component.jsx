@@ -15,6 +15,10 @@ const ProductDetail = () => {
         addItemToCart(product);
         if(!isCartOpen) {
             setIsCartOpen(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
         }
       
     };
