@@ -19,12 +19,13 @@ const ContactForm = () => {
     const { fullName, subject, email, body } = formFields;
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormFields({ ...formFields, [name]: value });
+      const { name, value } = event.target;
+      setFormFields({ ...formFields, [name]: value });
     };
 
     const handleSubmit = () => {
-        navigate('/contact/success');
+      console.log('Contact form data ', formFields);
+      navigate('/contact/success');
     };
 
     return (

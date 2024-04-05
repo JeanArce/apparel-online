@@ -57,7 +57,7 @@ const Checkout = () => {
             {cartItems && cartItems.length > 0 && (
               <div className="pay-container">
                 <Button onClick={() => navigate('/checkout/success')} type="button" buttonType={BUTTON_TYPE_CLASSES.inverted}>
-                  Pay
+                  Checkout
                 </Button>
               </div>
             )}
