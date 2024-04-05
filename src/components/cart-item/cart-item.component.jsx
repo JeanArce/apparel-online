@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import "./cart-item.styles.scss";
 
 const CartItem = ({ cartItem }) => {

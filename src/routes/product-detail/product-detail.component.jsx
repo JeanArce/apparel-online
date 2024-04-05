@@ -39,7 +39,7 @@ const ProductDetail = () => {
           <Fragment>
             <div className="productDetailContainer">
               <div className="left">
-                <img src={product.image.url} alt="Product Image" />
+                <img src={product.image.url} alt={`Product`} />
               </div>
 
               <div className="right">
