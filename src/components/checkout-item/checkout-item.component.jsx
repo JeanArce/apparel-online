@@ -3,7 +3,7 @@ import { CartContext } from "../../contexts/cart.context";
 import './checkout-item.styles.scss';
 
 const CheckoutItem = ({ cartItem }) => {
-  const { title, image, price, quantity } = cartItem;
+  const { title, image, price, quantity, discountedPrice } = cartItem;
   const { addItemToCart, removeItemFromCart, clearItemFromCart } =
     useContext(CartContext);
 
@@ -26,7 +26,16 @@ const CheckoutItem = ({ cartItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">{price}</span>
+
+      {price === discountedPrice && <span className="price">{price}</span>}
+
+      {price !== discountedPrice && (
+        <span className="price">
+          <strike>${price}</strike>
+          <br />
+          ${discountedPrice}
+        </span>
+      )}
 
       <div
         className="remove-button"

@@ -8,7 +8,7 @@ import "./product-card.styles.scss";
 const ProductCard = ({ product }) => {
     const navigate = useNavigate();
 
-    const { id, title, image, price } = product;
+    const { id, title, image, price, discountedPrice } = product;
 
     //const { addItemToCart } = useContext(CartContext);
     //const addProductToCart = () => addItemToCart(product);
@@ -18,23 +18,23 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div className="product-card-container">
-            <img src={image.url} alt={`${title}`} />
+      <div className="product-card-container">
+        <img src={image.url} alt={`${title}`} />
 
-            <div className="footer">
-                <div className="name">{title}</div>
-                <div className="price">{price}</div>
-            </div>
-
-            <Button
-                onClick={() => viewDetails(id)}
-                type="button"
-                buttonType={BUTTON_TYPE_CLASSES.inverted}
-            >
-                View Details
-            </Button>
-            
+        <div className="footer">
+          <div className="name">{title}</div>
+          {price === discountedPrice && <div className="price">${price}</div>}
+          {price !== discountedPrice && <div className="price"><strike>${price}</strike> ${discountedPrice}</div>}
         </div>
+
+        <Button
+          onClick={() => viewDetails(id)}
+          type="button"
+          buttonType={BUTTON_TYPE_CLASSES.inverted}
+        >
+          View Details
+        </Button>
+      </div>
     );
 
 

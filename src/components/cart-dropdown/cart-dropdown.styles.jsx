@@ -8,7 +8,7 @@ import {
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 280px;
+  width: 320px;
   height: 340px;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,10 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
+
+  @media (max-width: 767px) {
+    right: 0px;
+  }
 
   ${BaseButton},
   ${GoogleSignInButton},

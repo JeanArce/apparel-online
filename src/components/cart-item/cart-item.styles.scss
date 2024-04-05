@@ -19,6 +19,15 @@
     .name {
       font-size: 16px;
     }
+
+    .price {
+      span {
+        margin-left: 5px;
+        strike {
+          margin-right: 4px;
+        }
+      }
+    }
     
   }
 

@@ -10,6 +10,8 @@ const Home = () => {
     useEffect(() => {
         const getProducts = async() => {
             const productsJson = await fetchProducts();
+
+            console.log(productsJson);
             setProducts(productsJson.data);
         };
         getProducts();

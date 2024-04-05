@@ -23,7 +23,7 @@ const Layout = () => {
     return (
       <Fragment>
         <NavigationContainer>
-          <LogoContainer>
+          <LogoContainer to="/">
             <Logo width={45} height={45} />
             <LogoText>Online Apparel</LogoText>
           </LogoContainer>
